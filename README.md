@@ -1,2 +1,2 @@
-# repair_design.github.io
+# repair_design
 Сайт компании по ремонту квартир
