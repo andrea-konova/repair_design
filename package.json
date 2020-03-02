@@ -17,9 +17,14 @@
   },
   "homepage": "https://github.com/andrea-konova/repair_design#readme",
   "devDependencies": {
-    "gulp": "^4.0.2"
+    "gulp": "^4.0.2",
+    "gulp-clean-css": "^4.2.0",
+    "gulp-cssmin": "^0.2.0",
+    "gulp-rename": "^2.0.0"
   },
   "dependencies": {
-    "browser-sync": "^2.26.7"
+    "browser-sync": "^2.26.7",
+    "gulp-delete-files": "0.0.1",
+    "gulp-deleted": "^1.0.0"
   }
 }
