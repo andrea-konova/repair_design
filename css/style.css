@@ -437,9 +437,7 @@ body {
   .hero__content {
     position: relative;
     max-width: 47.85rem;
-    margin-top: 12.5rem;
-    margin-left: 4.28rem;
-    margin-bottom: 18.5rem; }
+    margin: 12.5rem 0 18.5rem 4.28rem; }
   .hero__text {
     margin: 1rem 0 3.2rem 0;
     font-size: 1.57rem;
