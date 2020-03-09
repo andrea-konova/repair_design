@@ -404,13 +404,15 @@ body {
     color: #e7c388; }
 
 .nav__item {
-  margin-right: 2.5rem;
+  margin-right: 2rem;
   color: #fff;
   text-decoration: none;
   text-transform: uppercase;
   transition: color 0.2s; }
   .nav__item:hover {
     color: #e3b873; }
+  .nav__item:first-child {
+    margin-left: 0.5rem; }
 
 .phone {
   color: #e3b873; }
@@ -425,6 +427,7 @@ body {
   justify-content: center;
   padding-top: 100px;
   background: #131313 url("../img/hero-bg.jpg") no-repeat center/cover;
+  height: 100vh;
   color: #fff; }
   .hero::before {
     content: '';
@@ -437,7 +440,7 @@ body {
   .hero__content {
     position: relative;
     max-width: 47.85rem;
-    margin: 12.5rem 0 18.5rem 4.28rem; }
+    margin-left: 4.28rem; }
   .hero__text {
     margin: 1rem 0 3.2rem 0;
     font-size: 1.57rem;
@@ -537,17 +540,20 @@ body {
   .hero__content {
     max-width: 22.86rem; }
   .hero__text {
-    font-size: 1.29rem;
-    margin-bottom: 2.28rem; }
+    margin-bottom: 2.27rem;
+    width: 100%;
+    max-width: 24.14rem;
+    font-size: 1.29rem; }
   .hero__button {
     display: block;
-    min-width: 24.14rem;
+    width: 100%;
+    max-width: 24.14rem;
     margin-bottom: 1.85rem; }
   .hero__scroll-down {
     display: none; }
   .title {
     font-size: 1.64rem; } }
 
-@media screen and (max-height: 550px) {
+@media screen and (max-height: 600px) {
   .hero__scroll-down {
     display: none; } }
