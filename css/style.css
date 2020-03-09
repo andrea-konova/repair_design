@@ -329,13 +329,17 @@ template {
     background-color: #e3b873;
     color: #fff;
     box-shadow: 0px 5px 15px rgba(227, 184, 115, 0.2);
-    transition: box-shadow 0.3s; }
+    transition: box-shadow, background-color 0.3s; }
     .button--primary:hover {
-      box-shadow: none; }
+      box-shadow: none;
+      background-color: #d69833; }
   .button--outline {
     border: 1px solid #fff;
     background-color: transparent;
     color: #fff; }
+    .button--outline:hover {
+      color: #e7c388;
+      border-color: #e7c388; }
 
 *, *:before, *:after {
   box-sizing: border-box; }
@@ -381,8 +385,15 @@ body {
   align-items: center; }
 
 .logo {
-  color: #e3b873;
   text-transform: uppercase; }
+  .logo__link {
+    color: #e3b873;
+    text-decoration: none; }
+
+.link {
+  transition: color 0.2s; }
+  .link:hover {
+    color: #e7c388; }
 
 .nav__item {
   margin-right: 40px;
