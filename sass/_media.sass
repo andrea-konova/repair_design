@@ -12,17 +12,31 @@
       display: none
     &__content
       margin-left: 0
+  .types, .design
+    .row
+      flex-wrap: wrap
+      justify-content: center
+      align-content: center
+    .col 
+      flex-basis: 45%
+      margin: 0 auto
+    &__card 
+      margin-bottom: 4rem
 @media screen and ( max-width: 760px )
-  .row
-    flex-direction: column
-    align-items: center
-  .types
-    &__card
-      margin-bottom: 5rem
-  .card
-    &__text
-      margin-left: 0 
-      margin-top: -11.7rem
+  // .row
+  //   flex-direction: column
+  //   align-items: center
+  // .types
+  //   &__card
+  //     margin-bottom: 4rem
+  // .card
+  //   &__text
+  //     margin-left: 0 
+  //     margin-top: -11.7rem
+  .types, .design
+    .card
+      &__text
+        width: 90%
 @media screen and ( max-width: 576px )
   .contacts
     &__phone
@@ -48,10 +62,21 @@
       display: none
   .title
     font-size: 1.64rem
+  .row
+    flex-direction: column
+    align-items: center
+  .types, .design  
+    &__card
+      margin-bottom: 7rem
+  .card
+    &__text
+      margin-left: 0 
+      margin-top: -11.7rem
 @media screen and ( max-height: 600px )
   .hero
     &__scroll-down
       display: none
+  
   
     
   

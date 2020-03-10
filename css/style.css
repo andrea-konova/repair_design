@@ -555,6 +555,7 @@ img {
 .card__title {
   font-family: 'Yeseva One', cursive;
   font-size: 1.29rem;
+  font-weight: 400;
   margin-top: 0;
   margin-bottom: 0.7rem; }
 
@@ -589,17 +590,20 @@ img {
   .hero__instagram {
     display: none; }
   .hero__content {
-    margin-left: 0; } }
+    margin-left: 0; }
+  .types .row, .design .row {
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center; }
+  .types .col, .design .col {
+    flex-basis: 45%;
+    margin: 0 auto; }
+  .types__card, .design__card {
+    margin-bottom: 4rem; } }
 
 @media screen and (max-width: 760px) {
-  .row {
-    flex-direction: column;
-    align-items: center; }
-  .types__card {
-    margin-bottom: 5rem; }
-  .card__text {
-    margin-left: 0;
-    margin-top: -11.7rem; } }
+  .types .card__text, .design .card__text {
+    width: 90%; } }
 
 @media screen and (max-width: 576px) {
   .contacts__phone {
@@ -623,7 +627,15 @@ img {
   .hero__scroll-down {
     display: none; }
   .title {
-    font-size: 1.64rem; } }
+    font-size: 1.64rem; }
+  .row {
+    flex-direction: column;
+    align-items: center; }
+  .types__card, .design__card {
+    margin-bottom: 7rem; }
+  .card__text {
+    margin-left: 0;
+    margin-top: -11.7rem; } }
 
 @media screen and (max-height: 600px) {
   .hero__scroll-down {
