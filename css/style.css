@@ -636,7 +636,13 @@ img {
     margin-bottom: 7rem; }
   .card__text {
     margin-left: 0;
-    margin-top: -11.7rem; } }
+    margin-top: -11.7rem; }
+  .card__pricetag {
+    box-shadow: 5px 5px 10px rgba(227, 184, 115, 0.3); }
+  .design {
+    background-color: #252525; }
+  .heading--light, .text--light {
+    color: #fff; } }
 
 @media screen and (max-height: 600px) {
   .hero__scroll-down {
