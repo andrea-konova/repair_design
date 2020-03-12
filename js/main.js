@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", function(event) {
+/* document.addEventListener("DOMContentLoaded", function(event) {
   const modal = document.querySelector('.modal');
   const modalBtn = document.querySelectorAll('[data-toggle=modal]');
   const closeBtn = document.querySelector('.modal__close');
@@ -11,7 +11,8 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
   closeBtn.addEventListener('click', switchModal);
 
-});
+}); */
+
 
 /* document.addEventListener('keypress', function (e) {
   const modal = document.querySelector('.modal');
@@ -26,3 +27,36 @@ document.addEventListener("DOMContentLoaded", function(event) {
    if (e.target != elem[0] && !elem.has(e.target).length) { elem.hide();
    } 
   }) */
+
+// modal__dialog jquery
+$(document).ready(function () {
+  var modal = $('.modal'),
+    modalBtn = $('[data-toggle=modal]'),
+    closeBtn = $('.modal__close');
+
+  modalBtn.on('click', function () {
+    modal.toggleClass('modal--visible');
+  });
+  closeBtn.on('click', function () {
+    modal.toggleClass('modal--visible');
+  });
+
+});  
+
+// up-arrow jquery
+$(document).ready(function () {
+
+  $(window).scroll(function () {
+    if ($(this).scrollTop() > 200) {
+      $('.scrollup').fadeIn();
+    } else {
+      $('.scrollup').fadeOut();
+    }
+  });
+
+  $('.scrollup').click(function () {
+    $("html, body").animate({ scrollTop: 0 }, 600);
+    return false;
+  });
+
+});
