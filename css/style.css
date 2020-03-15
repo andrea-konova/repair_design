@@ -432,6 +432,7 @@ img {
         height: 1px;
         background-color: #e3b873; }
     .section-title__description {
+      margin-bottom: 3rem;
       font-size: 1.28rem;
       line-height: 2.07rem;
       max-width: 31.57rem; }
@@ -630,8 +631,9 @@ img {
   .swiper-slide__text {
     flex-basis: 50%;
     margin-bottom: 2.42rem;
-    padding-bottom: 2rem; }
+    padding-bottom: 1rem; }
   .swiper-slide__heading {
+    margin: 0;
     margin-bottom: 0.64rem;
     font-family: 'Yeseva One', cursive;
     font-weight: 400;
@@ -822,26 +824,12 @@ img {
     box-shadow: 5px 5px 10px rgba(227, 184, 115, 0.3); }
   .section .col-50 {
     width: 85%; }
-  .section .col-1 {
-    order: 1; }
-  .section .col-2 {
-    order: 0; }
-  .section-title {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    margin: 0 auto; }
-    .section-title__heading {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-direction: column;
-      font-size: 1.57rem; }
-    .section-title__word::after {
-      display: none; }
-    .section-title__description {
-      text-align: center; }
+  .section-title__heading {
+    font-size: 1.57rem; }
+  .section-title__word::after {
+    display: none; }
+  .swiper__image {
+    margin-top: 2.36rem; }
   .design {
     background-color: #252525; }
   .heading--light, .text--light {

@@ -1,0 +1,9 @@
+{
+    "editor.tabSize": 2,
+    "editor.wordWrap": "on",
+    "editor.multiCursorModifier": "ctrlCmd",
+    "editor.formatOnPaste": true,
+    "editor.fontSize": 13,
+    "files.autoSave": "onFocusChange",
+    "editor.snippetSuggestions": "top"
+}
