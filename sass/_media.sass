@@ -29,6 +29,8 @@
       &__text
         width: 90%
 @media screen and ( max-width: 576px )
+  .header
+    background-color: $bg-main
   .contacts
     &__phone
       margin-right: 0
@@ -37,6 +39,8 @@
     &__button
       display: none
   .hero
+    &::after
+      background-color: $bg-main
     &__content
       max-width: 22.86rem
     &__text
@@ -74,15 +78,43 @@
       &__word
         &::after
           display: none
+  .project
+    background-color: $bg-main        
   .swiper
-    &-slide
-      
     &__image
       margin-top: 2.36rem
   .design
     background-color: $bg-main
   .heading, .text
     &--light
+      color: $light
+  .control
+    background-color: $bg-main
+    &__video
+      max-width: 28rem
+      min-height: 17rem
+    &__text
+      color: $light
+    &__form
+      flex-direction: column
+    &__input-group
+      &:first-child
+        margin-bottom: 5rem
+    &__label
+      padding-bottom: 0.3rem
+      color: rgba($light, 0.5)
+    &__input 
+       border-bottom: 1px solid $light
+       &::placeholder
+         color: $light 
+    &__button
+      margin-bottom: -7.4rem
+      order: 5
+      font-size: 1.25rem
+      line-height: 2.17rem
+    &__policy-label
+      justify-content: start
+      margin-bottom: 5rem
       color: $light
 @media screen and ( max-height: 600px )
   .hero
