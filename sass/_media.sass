@@ -116,6 +116,32 @@
       justify-content: start
       margin-bottom: 5rem
       color: $light
+  .footer
+    background: none
+    background-color: $bg-main
+    &__wrap
+      padding: 0
+      width: 100%
+      background: none
+      background-color: $bg-main
+    &__form
+      flex-direction: column
+    &__input-group
+      margin-bottom: 5rem
+      &--full-widht
+        margin-bottom: 0
+    &__input 
+       border-bottom: 1px solid $light
+    &__policy
+      margin-bottom: 5rem
+    .policy
+      &__label  
+        &--center
+          justify-content: start
+    &__button
+      width: 100%
+      font-size: 1.25rem
+      line-height: 2.17rem
 @media screen and ( max-height: 600px )
   .hero
     &__scroll-down
