@@ -80,6 +80,102 @@ $(document).ready(function () {
 
 });
 
+// Валидация форм
+// control__form
+$('.control__form').validate ({
+  errorClass: "invalid",
+  rules: { 
+    // строчное правило {required:true}
+    userName: {
+      required: true,
+      minlength: 2,
+      maxlength: 15
+    },
+    userPhone: "required"
+  },
+  // правило сообщение
+  messages: {
+    userName: {
+      required: "Заполните поле 'Имя'",
+      minlength: "Имя не короче 2 букв",
+      maxlength: "Имя не длиннее 15 букв"
+    },
+    userPhone: "Заполните поле 'Телефон'"
+  }
+});
+// end control__form
+
+// modal__form
+$('.modal__form').validate({
+  errorClass: "invalid",
+  rules: {
+    // строчное правило {required:true}
+    userName: {
+      required: true,
+      minlength: 2,
+      maxlength: 15
+    },
+    userPhone: "required",
+    // правило-объект (блок)
+    userEmail: {
+      required: true,
+      email: true
+    }
+  },
+  // правило сообщение
+  messages: {
+    userName: {
+      required: "Заполните поле 'Имя'",
+      minlength: "Имя не короче 2 букв",
+      maxlength: "Имя не длиннее 15 букв"
+    },
+    userPhone: "Заполните поле 'Телефон'",
+    userEmail: {
+      required: "Заполните поле 'Email'",
+      email: "Введите корректный emailВведите корректный email"
+    }
+  }
+});
+// end modal__form
+
+// footer__form
+$('.footer__form').validate({
+  errorClass: "invalid",
+  rules: {
+    // строчное правило {required:true}
+    userName: {
+      required: true,
+      minlength: 2,
+      maxlength: 15
+    },
+    userPhone: "required",
+    userQuestion: "required",
+    // правило-объект (блок)
+    userEmail: {
+      required: true,
+      email: true
+    }
+  },
+  // правило сообщение
+  messages: {
+    userName: {
+      required: "Заполните поле 'Имя'",
+      minlength: "Имя не короче 2 букв",
+      maxlength: "Имя не длиннее 15 букв"
+    },
+    userPhone: "Заполните поле 'Телефон'",
+    userQuestion: "Заполните поле 'Вопрос'",
+    userEmail: {
+      required: "Заполните поле Email",
+      email: "Введите корректный emailВведите корректный email"
+    }
+  }
+});
+// end footer__form
+
+// Маска для телефона
+$('[type=tel]').mask('+7(000) 000-00-00', { placeholder: "+7 (___) ___-__-__" });
+
 // ! function (a) {
 //   a.fn.viewportChecker = function (b) {
 //     var c = {

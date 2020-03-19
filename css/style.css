@@ -396,6 +396,12 @@ template {
   text-indent: -9999px;
   background: url("../img/up-arrow.png") no-repeat; }
 
+label.invalid {
+  color: tomato; }
+
+input.invalid {
+  border-bottom: 1px solid tomato; }
+
 *, *:before, *:after {
   box-sizing: border-box; }
 
@@ -741,16 +747,19 @@ img {
   margin: auto;
   max-width: 55rem; }
 
-.control__input-group {
-  display: flex;
-  flex-direction: column;
-  flex-basis: 30%; }
+.control__input {
+  color: #131313; }
+  .control__input-group {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 30%; }
 
 .control__label {
   margin-bottom: -7px; }
 
 .control__button {
-  padding: 1.285rem 4.785rem; }
+  padding: 1.285rem 4.785rem;
+  font-size: 1.07rem; }
 
 .control__policy {
   flex-basis: 100%;
@@ -896,10 +905,12 @@ img {
   .modal__form {
     display: flex;
     flex-direction: column; }
-  .modal__input {
+  .modal__input-group {
+    display: flex;
+    flex-direction: column;
     margin-bottom: 3.48rem; }
-    .modal__input:last-of-type {
-      margin-bottom: 1rem; }
+  .modal__input:last-of-type {
+    margin-bottom: 1rem; }
   .modal__policy {
     margin-bottom: 2.7rem; }
   .modal__button {
