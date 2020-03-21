@@ -33,6 +33,8 @@
   border-bottom: 1px solid rgba(54, 54, 54, 0.3)
   font-size: 1.285rem
   color: $light
+  &-group
+    position: relative
   &--light
     &::placeholder
       color: $light
@@ -73,3 +75,9 @@ label
 input
   &.invalid
     border-bottom: 1px solid tomato
+em
+  &.invalid
+    position: absolute
+    top: 0
+    right: 5px
+    color: tomato
