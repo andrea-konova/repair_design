@@ -265,6 +265,6 @@ ymaps.ready(function () {
 
   myMap.geoObjects
     .add(myPlacemark);
-  map.behaviors
+  myMap.behaviors
     .disable("scrollZoom");
 });
