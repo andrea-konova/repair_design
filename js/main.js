@@ -81,37 +81,6 @@ $(document).ready(function () {
 });
 
 // Валидация форм
-// control__form
-$('.control__form').validate ({
-  errorElement: "em",
-  errorClass: "invalid",
-  rules: { 
-    // строчное правило {required:true}
-    userName: {
-      required: true,
-      minlength: 2,
-      maxlength: 15
-    },
-    userPhone: {
-      required: true,
-      minlength: 17
-    },
-  },
-  // правило сообщение
-  messages: {
-    userName: {
-      required: "Заполните поле 'Имя'",
-      minlength: "Имя не короче 2 букв",
-      maxlength: "Имя не длиннее 15 букв"
-    },
-    userPhone: {
-      required: "Заполните поле 'Телефон'",
-      minlength: "Введите корректный телефон"
-    },
-  }
-});
-// end control__form
-
 // modal__form
 $('.modal__form').validate({
   errorElement: "em",
@@ -137,21 +106,53 @@ $('.modal__form').validate({
   // правило сообщение
   messages: {
     userName: {
-      required: "Заполните поле 'Имя'",
+      required: "Заполните поле",
       minlength: "Имя не короче 2 букв",
       maxlength: "Имя не длиннее 15 букв"
     },
     userPhone: {
-      required: "Заполните поле 'Телефон'",
-      minlength: "Введите корректный телефон"
+      required: "Заполните поле",
+      minlength: "Некорректный номер"
     },
+    policyCheckbox: "Cогласитесь с политикой",
     userEmail: {
-      required: "Заполните поле 'Email'",
-      email: "Введите корректный email"
-    }
+      required: "Заполните поле",
+      email: "Некорректный email"
+    },
   }
 });
 // end modal__form
+
+// control__form
+$('.control__form').validate({
+  errorElement: "em",
+  errorClass: "invalid",
+  rules: {
+    // строчное правило {required:true}
+    userName: {
+      required: true,
+      minlength: 2,
+      maxlength: 15
+    },
+    userPhone: {
+      required: true,
+      minlength: 17
+    },
+  },
+  // правило сообщение
+  messages: {
+    userName: {
+      required: "Заполните поле",
+      minlength: "Имя не короче 2 букв",
+      maxlength: "Имя не длиннее 15 букв"
+    },
+    userPhone: {
+      required: "Заполните поле",
+      minlength: "Некорректный номер"
+    },
+  }
+});
+// end control__form
 
 // footer__form
 $('.footer__form').validate({
@@ -181,21 +182,21 @@ $('.footer__form').validate({
   // правило сообщение
   messages: {
     userName: {
-      required: "Заполните поле 'Имя'",
+      required: "Заполните поле",
       minlength: "Имя не короче 2 букв",
       maxlength: "Имя не длиннее 15 букв"
     },
     userPhone: {
-      required: "Заполните поле 'Телефон'",
-      minlength: "Введите корректный телефон"
+      required: "Заполните поле",
+      minlength: "Некорректный номер"
     },
     userQuestion: {
-      required: "Заполните поле 'Вопрос'",
-      minlength: "Вопрос не короче 10 символов",
+      required: "Заполните поле",
+      minlength: "Не короче 10 символов",
     },
     userEmail: {
-      required: "Заполните поле Email",
-      email: "Введите корректный email"
+      required: "Заполните поле",
+      email: "Некорректный email"
     }
   }
 });

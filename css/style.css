@@ -407,7 +407,7 @@ input.invalid {
 em.invalid {
   position: absolute;
   top: 0;
-  right: 5px;
+  right: 1px;
   color: tomato; }
 
 *, *:before, *:after {
@@ -955,6 +955,7 @@ img {
     background-image: none !important;
     color: #fff !important; }
   .modal__policy {
+    position: relative;
     margin-bottom: 2.7rem; }
   .modal__button {
     align-self: flex-end; }
