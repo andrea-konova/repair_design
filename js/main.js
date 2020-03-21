@@ -119,6 +119,13 @@ $('.modal__form').validate({
       required: "Заполните поле",
       email: "Некорректный email"
     },
+  },
+  // для работы checkbox
+  errorPlacement: function (error, element) {
+    if (element.attr("type") == "checkbox") {
+      return element.next('label').append(error);
+    }
+    error.insertAfter($(element));
   }
 });
 // end modal__form
@@ -134,6 +141,7 @@ $('.control__form').validate({
       minlength: 2,
       maxlength: 15
     },
+    policyCheckbox: "required",
     userPhone: {
       required: true,
       minlength: 17
@@ -146,10 +154,18 @@ $('.control__form').validate({
       minlength: "Имя не короче 2 букв",
       maxlength: "Имя не длиннее 15 букв"
     },
+    policyCheckbox: "Cогласитесь с политикой",
     userPhone: {
       required: "Заполните поле",
       minlength: "Некорректный номер"
     },
+  },
+  // для работы checkbox
+  errorPlacement: function (error, element) {
+    if (element.attr("type") == "checkbox") {
+      return element.next('label').append(error);
+    }
+    error.insertAfter($(element));
   }
 });
 // end control__form
@@ -173,6 +189,7 @@ $('.footer__form').validate({
       required: true,
       minlength: 10
     },
+    policyCheckbox: "required",
     // правило-объект (блок)
     userEmail: {
       required: true,
@@ -190,6 +207,7 @@ $('.footer__form').validate({
       required: "Заполните поле",
       minlength: "Некорректный номер"
     },
+    policyCheckbox: "Cогласитесь с политикой",
     userQuestion: {
       required: "Заполните поле",
       minlength: "Не короче 10 символов",
@@ -198,6 +216,13 @@ $('.footer__form').validate({
       required: "Заполните поле",
       email: "Некорректный email"
     }
+  },
+  // для работы checkbox
+  errorPlacement: function (error, element) {
+    if (element.attr("type") == "checkbox") {
+      return element.next('label').append(error);
+    }
+    error.insertAfter($(element));
   }
 });
 // end footer__form

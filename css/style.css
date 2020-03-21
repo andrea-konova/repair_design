@@ -372,7 +372,7 @@ template {
   opacity: 0;
   visibility: hidden; }
   .policy__checkbox:checked + .policy__label::before {
-    background: #e3b873 url("../img/check.svg") no-repeat center; }
+    background: #e3b873 url("../img/check.svg") no-repeat center/0.8rem; }
 
 .policy__label {
   display: flex;
@@ -772,6 +772,7 @@ img {
 
 .control__policy {
   flex-basis: 100%;
+  position: relative;
   margin-top: 1.2rem; }
   .control__policy-label {
     justify-content: center; }
@@ -862,6 +863,7 @@ img {
         margin-bottom: 2rem; }
   .footer__policy {
     flex-basis: 100%;
+    position: relative;
     margin-bottom: 2rem; }
   .footer__button {
     margin: auto;
