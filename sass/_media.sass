@@ -12,7 +12,7 @@
       display: none
     &__content
       margin-left: 0
-  .types, .design
+  .types, .design, .team
     .row
       flex-wrap: wrap
       justify-content: center
@@ -23,11 +23,22 @@
         margin: 0 auto
     &__card 
       margin-bottom: 4rem
+  .team
+    &__row
+      margin-bottom: 0
+    .col
+      &-32
+        margin-bottom: 5rem
+        &:last-child
+          margin-bottom: 2rem
 @media screen and ( max-width: 760px )
   .types, .design
     .card
       &__text
         width: 90%
+  .team
+    &__card 
+      max-width: 80%
   .footer
     &__map
       height: 18.21rem
@@ -120,10 +131,33 @@
       justify-content: start
       margin-bottom: 5rem
       color: $light
+  .design
+    margin-bottom: 0
+    padding-bottom: 0
+  .steps
+    display: none
+  .team
+    background-color: $bg-main
+    padding-bottom: 2rem
+    padding-top: 0.5rem
+    &__section-title
+      margin-top: 0rem
+      padding: 0
+    &__description
+      font-size: 1.071rem
+      line-height: 135.84%
+      &--dark
+        display: none
+    &__card 
+      max-width: 100%
+    &__text
+      max-width: 17.65rem
+      margin: -5.8rem auto 0 auto
   .footer
     background: none
     background-color: $bg-main
     &__wrap
+      margin-top: 0
       padding: 0
       width: 100%
       background: none
