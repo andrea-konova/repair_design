@@ -141,23 +141,23 @@ $('.modal__form').validate({
       return element.next('label').append(error);
     }
     error.insertAfter($(element));
-  }
+  },
   // отправка формы через ajax 
-  // submitHandler: function (form) {
-  //   $.ajax({
-  //     type: "POST",
-  //     url: "send.php",
-  //     data: $(form).serialize(),
-  //     success: function (response) {
-  //       alert('Форма отправленнa, мы свяжемся с вами через 15 минут');
-  //       $(form)[0].reset();
-  //       modal.removeClass('modal--visible');
-  //     },
-  //     error: function (response) {
-  //       console.error('Ошибка запроса' + response);
-  //     }
-  //   });
-  // }
+  submitHandler: function (form) {
+    $.ajax({
+      type: "POST",
+      url: "send.php",
+      data: $(form).serialize(),
+      success: function (response) {
+        alert('Форма отправленнa, мы свяжемся с вами через 15 минут');
+        $(form)[0].reset();
+        modal.toggleClass('modal--visible');
+      },
+      error: function (response) {
+        console.error('Ошибка запроса ' + response);
+      }
+    });
+  }
 });
 // end modal__form
 
