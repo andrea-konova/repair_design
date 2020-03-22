@@ -36,6 +36,21 @@ $(document).ready(function () {
 
 });  
 
+// thanks__dialog jquery
+$(document).ready(function () {
+  var modal = $('.thanks'),
+    modalBtn = $('[data-toggle=thanks]'),
+    closeBtn = $('.thanks__close');
+
+  modalBtn.on('click', function () {
+    modal.toggleClass('thanks--visible');
+  });
+  closeBtn.on('click', function () {
+    modal.toggleClass('thanks--visible');
+  });
+
+});  
+
 // up-arrow jquery
 $(document).ready(function () {
 
@@ -126,23 +141,23 @@ $('.modal__form').validate({
       return element.next('label').append(error);
     }
     error.insertAfter($(element));
-  },
-  // отправка формы через ajax 
-  submitHandler: function (form) {
-    $.ajax({
-      type: "POST",
-      url: "send.php",
-      data: $(form).serialize(),
-      success: function (response) {
-        alert('Форма отправленнa, мы свяжемся с вами через 15 минут');
-        $(form)[0].reset();
-        modal.removeClass('modal--visible');
-      },
-      error: function (response) {
-        console.error('Ошибка запроса' + response);
-      }
-    });
   }
+  // отправка формы через ajax 
+  // submitHandler: function (form) {
+  //   $.ajax({
+  //     type: "POST",
+  //     url: "send.php",
+  //     data: $(form).serialize(),
+  //     success: function (response) {
+  //       alert('Форма отправленнa, мы свяжемся с вами через 15 минут');
+  //       $(form)[0].reset();
+  //       modal.removeClass('modal--visible');
+  //     },
+  //     error: function (response) {
+  //       console.error('Ошибка запроса' + response);
+  //     }
+  //   });
+  // }
 });
 // end modal__form
 
