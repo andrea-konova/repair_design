@@ -89,7 +89,7 @@ abbr[title] {
   text-decoration: underline;
   /* 2 */
   -webkit-text-decoration: underline dotted;
-  text-decoration: underline dotted;
+          text-decoration: underline dotted;
   /* 2 */ }
 
 /**
@@ -790,7 +790,7 @@ img {
 
 .types__image {
   -webkit-animation: slideLeft 3s ease-in-out 0.1s 1 normal forwards;
-  animation: slideLeft 3s ease-in-out 0.1s 1 normal forwards; }
+          animation: slideLeft 3s ease-in-out 0.1s 1 normal forwards; }
 
 .card__text {
   position: relative;

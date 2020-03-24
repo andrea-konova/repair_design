@@ -32,7 +32,8 @@ function serveSass() {
   return src("./sass/**/*.sass", "./sass/**/*.sass")
     .pipe(sass())
     .pipe(autoprefixer({
-      cascade: false
+      grid: true,
+      overrideBrowserlist: ['last 10 version']
     }))
     .pipe(dest("./css/"))
     .pipe(browserSync.stream());
