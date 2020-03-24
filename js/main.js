@@ -1,25 +1,3 @@
-/* document.addEventListener("DOMContentLoaded", function(event) {
-  const modal = document.querySelector('.modal');
-  const modalBtn = document.querySelectorAll('[data-toggle=modal]');
-  const closeBtn = document.querySelector('.modal__close');
-  const switchModal = () => {
-    modal.classList.toggle('modal--visible');
-  }
-  modalBtn.forEach(element => {
-    element.addEventListener('click', switchModal);
-  });
-
-  closeBtn.addEventListener('click', switchModal);
-
-}); */
-
-/* $('.modal').on('click', function (e) {
-  if (e.target == this) $('.modal__dialog').fadeOut('fast');
-}) */
-
-// $(document).click(function (e) { 
-//   var elem = $('.modal'); 
-//   if (e.target != elem[0] && !elem.has(e.target).length) { elem.hide(); } }) 
 
 // modal__dialog jquery
 $(document).ready(function () {
@@ -56,6 +34,20 @@ $(document).ready(function () {
   $('.scrollup').click(function () {
     $("html, body").animate({ scrollTop: 0 }, 600);
     return false;
+  });
+
+  // скрипт для плавного перехода по якорным ссылкам
+  jQuery(function ($) {
+    $('a[href*="#"]').on('click.smoothscroll', function (e) {
+      var hash = this.hash, _hash = hash.replace(/#/, ''), theHref = $(this).attr('href').replace(/#.*/, '');
+      if (theHref && location.href.replace(/#.*/, '') != theHref) return;
+      var $target = _hash === '' ? $('body') : $(hash + ', a[name="' + _hash + '"]').first();
+      if (!$target.length) return;
+      e.preventDefault();
+      $('html, body').stop().animate({ scrollTop: $target.offset().top - 0 }, 500, 'swing', function () {
+        window.location.hash = hash;
+      });
+    });
   });
 
 });

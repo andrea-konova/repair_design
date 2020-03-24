@@ -53,25 +53,30 @@
       text-decoration: none
     &__button
       display: none
+  .title
+    font-size: 1.64rem
   .hero
     &::after
       background-color: $bg-main
     &__content
-      max-width: 22.86rem
+      margin: 0
+    &__title
+      max-width: 24.14rem
+      font-size: 1.91rem
+      line-height: 132.83%
     &__text
       margin-bottom: 2.27rem
-      width: 100%
-      max-width: 24.14rem
-      font-size: 1.29rem
+      width: 99%
+      font-size: 1.49rem
+      line-height: 135.84%
+      font-weight: 300
     &__button
       display: block
       width: 100%
-      max-width: 24.14rem
       margin-bottom: 1.85rem
+      font-size: 1.08rem
     &__scroll-down
       display: none
-  .title
-    font-size: 1.64rem
   .row
     flex-direction: column
     align-items: center
@@ -89,7 +94,10 @@
       width: 100%
     &-title
       &__heading
-        font-size: 1.57rem
+        font-size: 1.82rem
+      &__description
+        font-size: 1.166rem
+        max-width: 23.82rem
       &__word
         &::after
           display: none
@@ -98,6 +106,9 @@
   .swiper
     &__image
       margin-top: 2.36rem
+    &-slide
+      &__heading, &__value
+        font-size: 1.166rem
   .design
     background-color: $bg-main
   .heading, .text
@@ -109,6 +120,8 @@
       max-width: 28rem
       min-height: 17rem
     &__text
+      font-size: 1.166rem
+      line-height: 169.8%
       color: $light
     &__form
       flex-direction: column
@@ -119,7 +132,7 @@
       padding-bottom: 0.3rem
       color: rgba($light, 0.5)
     &__input 
-       border-bottom: 1px solid $light
+       border-bottom: 1px solid rgba(255, 255, 255, 0.7)
        &::placeholder
          color: $light 
     &__button
@@ -131,6 +144,9 @@
       justify-content: start
       margin-bottom: 5rem
       color: $light
+  .video
+    &__play
+      width: 5.08rem
   .design
     margin-bottom: 0
     padding-bottom: 0
@@ -169,7 +185,7 @@
       &--full-widht
         margin-bottom: 0
     &__input 
-       border-bottom: 1px solid $light
+       border-bottom: 1px solid  rgba(255, 255, 255, 0.7)
     &__policy
       margin-bottom: 5rem
     .policy
@@ -186,7 +202,7 @@
     &__contacts
       order: 2
     &__text
-      font-size: 1.285rem
+      font-size: 1.5rem
       line-height: 138.6%
     &__phone
       color: $primary
