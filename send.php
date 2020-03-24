@@ -40,8 +40,8 @@ try {
     }
     
     
-//     $mail->send();
-//     header('Location: thanks.html');
-// } catch (Exception $e) {
-//     echo "Письмо не отправлено, есть ошибка. Код ошибки: {$mail->ErrorInfo}";
-// }
+    // $mail->send();
+    // header('Location: thanks.html');
+} catch (Exception $e) {
+    echo "Письмо не отправлено, есть ошибка. Код ошибки: {$mail->ErrorInfo}";
+}

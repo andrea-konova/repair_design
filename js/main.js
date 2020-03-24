@@ -38,12 +38,7 @@ $(document).ready(function () {
 
 // thanks__dialog jquery
 $(document).ready(function () {
-  var thanks = $('.thanks'),
-      thanksBtn = $('.thanks__close');
-
-  thanksBtn.on('click', function () {
-    thanks.toggleClass('thanks--visible');
-  });
+  
 
 });  
 
@@ -93,6 +88,13 @@ $(document).ready(function () {
 
 // Валидация форм
 // modal__form
+var modal = $('.modal');
+var thanks = $('.thanks'),
+  thanksClose = $('.thanks__close');
+
+thanksClose.on('click', function () {
+  thanks.toggleClass('thanks--visible');
+});
 $('.modal__form').validate({
   errorElement: "em",
   errorClass: "invalid",
@@ -138,17 +140,17 @@ $('.modal__form').validate({
     }
     error.insertAfter($(element));
   },
+  
   // отправка формы через ajax 
   submitHandler: function (form) {
     $.ajax({
       type: "POST",
-      url: "send.php",
+      url: "./send.php",
       data: $(form).serialize(),
       success: function (response) {
-        alert('Сообщение отправленно, наш менеждер свяжется с вами в течении 15 минут');
         $(form)[0].reset();
         modal.removeClass('modal--visible');
-        thanks.toggleClass('thanks--visible');
+        thanks.addClass('thanks--visible');
       },
       error: function (response) {
         console.error('Ошибка запроса ' + response);
@@ -199,12 +201,11 @@ $('.control__form').validate({
   submitHandler: function (form) {
     $.ajax({
       type: "POST",
-      url: "send.php",
+      url: "./send.php",
       data: $(form).serialize(),
       success: function (response) {
-        alert('Сообщение отправленно, наш менеждер свяжется с вами в течении 15 минут');
         $(form)[0].reset();
-
+        thanks.addClass('thanks--visible');
       },
       error: function (response) {
         console.error('Ошибка запроса ' + response);
@@ -272,12 +273,11 @@ $('.footer__form').validate({
   submitHandler: function (form) {
     $.ajax({
       type: "POST",
-      url: "send.php",
+      url: "./send.php",
       data: $(form).serialize(),
       success: function (response) {
-        alert('Сообщение отправленно, наш менеждер свяжется с вами в течении 15 минут');
         $(form)[0].reset();
-
+        thanks.addClass('thanks--visible');
       },
       error: function (response) {
         console.error('Ошибка запроса ' + response);
