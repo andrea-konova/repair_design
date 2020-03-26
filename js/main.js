@@ -87,6 +87,9 @@ var thanks = $('.thanks'),
 thanksClose.on('click', function () {
   thanks.toggleClass('thanks--visible');
 });
+$.validator.methods.email = function (value, element) {
+  return this.optional(element) || /[a-z]+@[a-z]+.[a-z]+/.test(value);
+};
 $('.modal__form').validate({
   errorElement: "em",
   errorClass: "invalid",
@@ -282,7 +285,29 @@ $('.footer__form').validate({
 // Маска для телефона
 $('[type=tel]').mask('+7(000) 000-00-00', { placeholder: "+7 (___) ___-__-__" });
 
+var player;
+$('.video__play').on('click', function onYouTubeIframeAPIReady() {
+  player = new YT.Player('player', {
+    height: '100%',
+    width: '100%',
+    videoId: 'TXpdkK6lDmk',
+    events: {
+      'onReady': videoPlay
+    }
+  });
+})
+
+function videoPlay(event) {
+  event.target.playVideo();
+}
+
 // Создание яндекс карт
+setTimeout(function () {
+  var elem = document.createElement('script');
+  elem.type = 'text/javascript';
+  elem.src = '//api-maps.yandex.ru/2.0/?load=package.standard&lang=ru-RU&onload=getYaMap';
+  document.getElementsByTagName('body')[0].appendChild(elem);
+}, 4000);
 // Функция ymaps.ready() будет вызвана, когда
 // загрузятся все компоненты API, а также когда будет готово DOM-дерево.
 ymaps.ready(function () {

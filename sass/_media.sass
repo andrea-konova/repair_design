@@ -5,6 +5,28 @@
     &__item
       margin-right: 1rem
 @media screen and ( max-width:  992px )
+  .button
+    &:hover
+      cursor: default
+    &--primary
+      &:hover
+        box-shadow: 0px 5px 15px rgba($primary, 0.2)
+        background-color: $primary
+    &--outline
+      &:hover
+        color: $light
+        border-color: $light
+  .scroll-down
+    cursor: default
+  .scrollup
+    cursor: default 
+  .swiper-button-next, .swiper-button-prev
+      cursor: default
+  .link
+    transition: none
+    cursor: default
+    &:hover
+      color: $primary
   .nav
     display: none
   .hero
@@ -12,6 +34,11 @@
       display: none
     &__content
       margin-left: 0
+  .video
+    &__play
+      cursor: default
+      &:hover
+        box-shadow: none
   .types, .design, .team
     .row
       flex-wrap: wrap

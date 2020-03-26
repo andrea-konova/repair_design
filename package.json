@@ -21,6 +21,7 @@
     "gulp-autoprefixer": "^7.0.1",
     "gulp-clean-css": "^4.3.0",
     "gulp-cssmin": "^0.2.0",
+    "gulp-minify": "^3.1.0",
     "gulp-rename": "^2.0.0",
     "gulp-sass": "^4.0.2"
   },
@@ -28,6 +29,8 @@
     "browser-sync": "^2.26.7",
     "gulp-delete-files": "0.0.1",
     "gulp-deleted": "^1.0.0",
+    "gulp-htmlmin": "^5.0.1",
+    "gulp-tinypng-compress": "^1.2.5",
     "lodash": "^4.17.15",
     "lodash.template": "^4.5.0",
     "minimist": "^1.2.5"

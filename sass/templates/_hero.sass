@@ -5,6 +5,7 @@
   justify-content: center
   padding-top: 100px
   background: $dark url('../img/hero-bg.jpg') no-repeat center / cover
+  min-height: 100%
   height: 100vh
   color: $light
   &::before
@@ -27,7 +28,7 @@
   &__content
     position: relative
     max-width: 47.85rem
-    margin-left: 4.28rem 
+    margin-left: 4.28rem
   &__text
     margin: 1rem 0 3.2rem 0
     font-size: 1.57rem
@@ -48,6 +49,7 @@
     bottom: 0
     min-width: 17.6rem
     min-height: 6.93rem
+    height: 6.93rem
     background-color: $dark
     text-transform: uppercase
     text-decoration: none
@@ -101,3 +103,6 @@
   line-height: 1.4
   &--primary
     color: $primary
+
+_:-ms-fullscreen, :root .hero__content
+  margin: 0 0 5rem 4.28rem
