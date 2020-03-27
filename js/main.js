@@ -302,46 +302,13 @@ function videoPlay(event) {
 }
 
 // Создание яндекс карт
-setTimeout(function () {
-  var elem = document.createElement('script');
-  elem.type = 'text/javascript';
-  elem.src = '//api-maps.yandex.ru/2.0/?load=package.standard&lang=ru-RU&onload=getYaMap';
-  document.getElementsByTagName('body')[0].appendChild(elem);
-}, 4000);
-// Функция ymaps.ready() будет вызвана, когда
-// загрузятся все компоненты API, а также когда будет готово DOM-дерево.
-ymaps.ready(function () {
-  var myMap = new ymaps.Map('map', {
-    center: [47.244729, 39.723187],
-    zoom: 12,
-    controls: ["typeSelector", "zoomControl"]
-  }, {
-    searchControlProvider: 'yandex#search'
-  }),
-
-    // Создаём макет содержимого.
-    MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
-      '<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>'
-    ),
-
-    myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
-      hintContent: 'Наш офис',
-      balloonContent: 'Заходи, если чё'
-    }, {
-      // Опции.
-      // Необходимо указать данный тип макета.
-      iconLayout: 'default#image',
-      // Своё изображение иконки метки.
-      iconImageHref: 'img/location-pin.png',
-      // Размеры метки.
-      iconImageSize: [32, 32],
-      // Смещение левого верхнего угла иконки относительно
-      // её "ножки" (точки привязки).
-      iconImageOffset: [-5, -38]
-    });
-
-  myMap.geoObjects
-    .add(myPlacemark);
-  myMap.behaviors
-    .disable("scrollZoom");
+var design = $('.design');
+var designTop = design.offset().top;
+$(window).bind('scroll', function () {
+  var windowTop = $(this).scrollTop();
+  if (windowTop > designTop) {
+    $('#map').html('<script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A4d94309aa54d49b539355686315859df3292a3dbf4770ba29837bcc28dc2a9b7&amp;width=100%25&amp;height=100%&amp;lang=ru_UA&amp;scroll=false"></script>')
+    $(window).unbind('scroll')
+  }
 });
+  
